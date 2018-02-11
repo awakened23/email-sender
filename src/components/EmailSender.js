@@ -106,7 +106,6 @@ class EmailSender extends Component {
             if(values.bcc){
                 values.bcc = this.getCommaSeparatedEmails(values.bcc);
             }
-            console.log('----------values to submit', values);
             //this is to simulate slow backend
             //setTimeout(function(){
                 sendEmail(values);
@@ -114,7 +113,6 @@ class EmailSender extends Component {
 
         }else{
             resetSendStatus();
-            console.log('------------errors', errors);
             throw new SubmissionError(errors);
         }
     }
