@@ -5,6 +5,10 @@ Yarn is required for this project.
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Installs the project dependencies.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br>
