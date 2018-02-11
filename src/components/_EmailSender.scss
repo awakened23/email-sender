@@ -1,0 +1,33 @@
+.email-sender-box{
+    margin-top: 20px;
+    max-width: 40rem;
+    padding: 0 0.8rem;
+
+    .field-label{
+        width: 60px;
+    }
+
+    %general-message{
+        margin-bottom: 25px;
+    }
+
+    .general-error-message{
+        @extend %general-message;
+        color: red;
+    }
+
+    .general-success-message{
+        @extend %general-message;
+        color: LightGreen;
+    }
+
+    .field-error-text{
+        color: red;
+        margin-top: -18px;
+        margin-bottom: 17px;
+    }
+
+    textarea{
+        height: 300px;
+    }
+}

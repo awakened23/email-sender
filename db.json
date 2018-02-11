@@ -1,0 +1,8 @@
+{
+  "sendEmail": {
+    "to": "df@dfdg.dff",
+    "subject": "Subject",
+    "cc": "",
+    "bcc": ""
+  }
+}
