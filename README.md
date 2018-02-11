@@ -17,13 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-REACT_APP_API_PATH can be provided as an environment variable when running yarn start
-to set the backend API path. For example:
-
-```
-REACT_APP_API_PATH=http://localhost:3005/sendEmail yarn start
-```
-
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.
@@ -36,7 +29,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-## Set up a mock server
+## Setting up a mock server
 
 Run the following command in the project directory to start json-server:
 
@@ -44,5 +37,12 @@ Run the following command in the project directory to start json-server:
 npx json-server --watch db.json --port 3005
 ```
 
-The post request will be sent to json-server when the send button is clicked if
-json-server has started and the application is started without setting the REACT_APP_API_PATH.
+This will make json-server listen to http://localhost:3005/sendEmail as configured in db.json.
+
+By default, the application is sending a post request to http://localhost:3005/sendEmail. This can be overriden by setting an environment variable called REACT_APP_API_PATH before the application is started or built. For example:
+
+```
+REACT_APP_API_PATH=http://localhost:3005/sendEmail yarn start
+```
+
+Json-server can listen to requests coming from anywhere so it can be used in production as well.
